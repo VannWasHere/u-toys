@@ -1,0 +1,3 @@
+commit via vsc terminal:
+1. git add --all
+2. git commit -m "Contoh Message's"

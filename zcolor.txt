@@ -1,4 +1,0 @@
-Main Color      : #99A98F
-Secondary Color : #C1D0B5
-Third Color     : #D6E8DB
-Fourth Color    : #FFF8DE

@@ -7,12 +7,47 @@
     <title>Login</title>
 
     <!-- Local CSS -->
-    <link rel="stylesheet" href="css/1_global.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
+    <div class="container">
+        <div class="image-login">
+            <img src="https://images.unsplash.com/photo-1553517491-0d108eea9147?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1228&q=80" class="cover" alt="Toys Images">
+        </div>
+        <div class="form-login">
+            <div class="login-header">
+                <h2 id="login-h2">Welcome to U-Toys!</h2>
+                <h3 id="slogan-h3">Hip Hip Hura Hura</h3>
+            </div>
 
+            <!-- Login Form -->
+            <div class="login-form">
+                <form action="" method="post">
+                    <input type="text" class="login-input" name="username" id="input-username" autocomplete="off" placeholder="Username or Email" required> <br>
+                    <input type="password" class="login-input" name="password" id="input-password" autocomplete="off" placeholder="Password" required>
+                    <p id="forgot-password">Forgot Password?</p>
+
+                    <!-- Submit Button -->
+                    <button type="button" id="login-button">Submit Form</button>
+                </form>
+            </div>
+            <p id="register">If you don't have an account, <b>click here</b> to register!</p>
+        </div>
+    </div>
 
     <!-- Javascript Icon -->
     <script src="https://kit.fontawesome.com/e67bdeab51.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- JQuery Code -->
+    <script>
+        $('.login-input').on('input', function() {
+            if($(this).val() !== '') {
+                $('#login-button').addClass('active');
+            } else {
+                $('#login-button').removeClass('active');
+            }
+        });
+    </script>
 </body>
 </html>

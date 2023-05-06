@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 :root{
@@ -11,7 +14,9 @@
     --secondary-color: #C1D0B5;
     --third-color: #D6E8DB;
     --fourth-color: #FFF8DE;
-
+    
     /* Dark Color */
 
+    /* Text Color */
+    --text-color-semi-black: #282A3A; /* Semi Black - Color */
 }
