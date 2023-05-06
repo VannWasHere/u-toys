@@ -1,3 +1,10 @@
-commit via vsc terminal:
+commit and push via Visual Studio:
+** Open BASH terminal
 1. git add --all
 2. git commit -m "Contoh Message's"
+** Close BASH terminal
+
+** Ke Source Control
+4. Sync Changes
+
+Tips: Bisa juga lewa Source Control langsung
