@@ -3,3 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root{
+
+    /* Light Color */
+    --primary-color: #99A98F;
+    --secondary-color: #C1D0B5;
+    --third-color: #D6E8DB;
+    --fourth-color: #FFF8DE;
+
+    /* Dark Color */
+
+}
