@@ -4,9 +4,10 @@ html, body {
     height: 100vh;
     overflow: hidden;
 }
+
 .container {
     display: flex;
-    background-color: #FFFFFF;
+    background-color: var(--fifth-color);
     height: 100%;
     color: var(--text-color-semi-black);
 }
@@ -33,6 +34,7 @@ html, body {
 
 #login-h2 {
     font-size: 3em;
+    letter-spacing: 1.5px;
 }
 
 #slogan-h3 {
@@ -97,7 +99,6 @@ html, body {
 #register {
     margin-top: 10%;
     text-align: center;
-    cursor: pointer;
 }
 
 /* FOR MOBILE */
