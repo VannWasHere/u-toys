@@ -1,0 +1,252 @@
+@import url('1_global.css');
+
+body {
+    background-color: var(--fifth-color);
+}
+
+.user-header {
+    display: flex;
+    width: 100%;
+    align-items : center;
+    margin-top: 1%;
+    color: var(--text-color-semi-black);
+}
+
+#user-hello {
+    font-weight: bold;
+    letter-spacing: 1.4px;
+}
+
+.section1-header {
+    flex: 25%;
+}
+
+.section2-header {
+    flex: 50%;
+    text-align: center;
+}
+
+.section3-header {
+    flex: 25%;
+    text-align: right;
+}
+
+
+/* Is User Login */
+.user-login {
+    display: none;
+}
+
+.user-method {
+    padding: 2%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.user-method:nth-child(2) {
+    background-color: brown;
+    color: white;
+}
+
+.navigation-bar-container {
+    width: 100%;
+    position: relative;
+    margin-top: 3%;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+}
+
+ul {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: right;
+}
+
+ul a:not(:nth-child(1)) {
+    margin-left: 2%;
+}
+
+ul a {
+    text-decoration: none;
+    color: var(--text-color-semi-black);
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    padding: 0.4%;
+}
+
+ul a:hover {
+    background-color: red;
+    color: var(--text-color-semi-white);
+}
+
+.slider-container {
+    max-width: 98%;
+    margin: 0 auto;
+    margin-top: 3%;
+    position: relative;
+}
+
+.images-sec-container {
+    position: relative;
+    height: 300px;
+}
+
+.images-slide {
+    width: 100%;
+    height: 300px;
+}
+
+.another {
+    display: none;
+}
+
+.image-content {
+    width: 100%;
+    height: 300px;
+    user-select: none;
+    border-radius: 5px;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    font-size: 1.7em;
+    top: 41.4%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1%;
+    transition: all 0.5s ease;
+    user-select: none;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.next {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    right: 0;
+}
+
+/* Fade Animation */
+.fade-animation {
+    animation-name: fade;
+    animation-duration: 3s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.content-container {
+    margin-top: 8%;
+    margin-bottom: 3%;
+}
+
+#home-products-h1 {
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.product-grid-card-container {
+    display: grid;
+    margin-top: 2%;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 70px;
+    grid-row-gap: 20px;
+    justify-content: center;
+}
+
+.card-container {
+    width: 250px;
+    padding: 2%;
+    cursor: pointer;
+    box-shadow: 7px 5px 10px -3px rgba(71,27,27,0.75);
+}
+
+.product-images-container {
+    width: 100%;
+    text-align: center;
+}
+
+/* Images Resize */
+.product-images {
+    width: 200px;
+    user-select: none;
+    transition: all 0.2s ease;
+}
+
+.product-images:hover {
+    transform: scale(1.03);
+}
+
+.product-name {
+    font-size: 0.9em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.product-category {
+    font-size: 0.7em;
+}
+
+
+.product-price {
+    font-size: 0.7em;
+    font-weight: bold;
+    color: rgb(21, 184, 21);
+}
+
+.detail-and-addcart {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3%;
+}
+
+.see-details-button {
+    padding: 1%;
+    cursor: pointer;
+    border: none;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    color: var(--text-color-semi-white);
+    transition: all 0.3s ease;
+}
+
+.see-details-button:hover {
+    transform: translateX(5px);
+}
+
+.add-to-cart {
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    text-decoration: underline;
+}
+
+.add-to-cart:hover {
+    transform: translateX(-5px);
+}

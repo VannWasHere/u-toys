@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="css/home.css">
+
+    <!-- Link JS -->
+    <script src="js/carousel.js"></script>
+</head>
+<body>
+    <div class="user-header">
+        <div class="section1-header">
+            <h3 id="user-hello">Hello, User!</h3>
+        </div>
+        <div class="section2-header">
+            <h2>U-Toys</h2>
+        </div>
+        <div class="section3-header">
+            <div class="user-login">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="user-not-login">
+                <button type="button" class="user-method">Sign In</button>
+                <button type="button" class="user-method">Sign Up</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar Container -->
+    <div class="navigation-bar-container">
+        <nav>
+            <div class="logo">
+                <h2>Logo</h2>
+            </div>
+            <ul>
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Product</a>
+                <a href="">Contact Us</a>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Carousel Container -->
+    <div class="slider-container">
+        <div class="images-sec-container">
+            <div class="images-slide fade-animation">
+                <img src="https://images3.alphacoders.com/823/82317.jpg" alt="image1" class="image-content">
+            </div>
+            <div class="images-slide another fade-animation">
+                <img src="https://images.alphacoders.com/475/475967.jpg" alt="image2" class="image-content">
+            </div>
+            <div class="images-slide another fade-animation">
+                <img src="https://images3.alphacoders.com/147/147799.jpg" alt="image3" class="image-content">
+            </div>
+            
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="nextSlide(1)">&#10094;</a>
+            <a class="next" onclick="prevSlide(1)">&#10095;</a>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <div class="home-products">
+            <h1 id="home-products-h1">Our Products</h1>
+            <div class="product-grid-card-container">
+
+                <div class="card-container">
+                    <div class="product-images-container">
+                        <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
+                    </div>
+                    <div class="product-description">
+                        <p class="product-name">Logo the Board Game</p>
+                        <p class="product-category">Board Game</p>
+                        <p class="product-price">Rp.90.000,00</p>
+                        <div class="detail-and-addcart">
+                            <button type="button" class="see-details-button">See Detail</button>
+                            <p class="add-to-cart">Add to Cart</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-container">
+                    <div class="product-images-container">
+                        <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
+                    </div>
+                    <div class="product-description">
+                        <p class="product-name">Logo the Board Game</p>
+                        <p class="product-category">Board Game</p>
+                        <p class="product-price">Rp.90.000,00</p>
+                        <div class="detail-and-addcart">
+                            <button type="button" class="see-details-button">See Detail</button>
+                            <p class="add-to-cart">Add to Cart</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-container">
+                    <div class="product-images-container">
+                        <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
+                    </div>
+                    <div class="product-description">
+                        <p class="product-name">Logo the Board Game</p>
+                        <p class="product-category">Board Game</p>
+                        <p class="product-price">Rp.90.000,00</p>
+                        <div class="detail-and-addcart">
+                            <button type="button" class="see-details-button">See Detail</button>
+                            <p class="add-to-cart">Add to Cart</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-container">
+                    <div class="product-images-container">
+                        <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
+                    </div>
+                    <div class="product-description">
+                        <p class="product-name">Logo the Board Game</p>
+                        <p class="product-category">Board Game</p>
+                        <p class="product-price">Rp.90.000,00</p>
+                        <div class="detail-and-addcart">
+                            <button type="button" class="see-details-button">See Detail</button>
+                            <p class="add-to-cart">Add to Cart</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-container">
+                    <div class="product-images-container">
+                        <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
+                    </div>
+                    <div class="product-description">
+                        <p class="product-name">Logo the Board Game</p>
+                        <p class="product-category">Board Game</p>
+                        <p class="product-price">Rp.90.000,00</p>
+                        <div class="detail-and-addcart">
+                            <button type="button" class="see-details-button">See Detail</button>
+                            <p class="add-to-cart">Add to Cart</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript Link -->
+    <script src="https://kit.fontawesome.com/e67bdeab51.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>
