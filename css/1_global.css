@@ -7,11 +7,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    padding-left: 7%;
-    padding-right: 7%;
-}
-
 :root{
 
     /* Light Color */
@@ -19,9 +14,15 @@ body {
     --secondary-color: #C1D0B5;
     --third-color: #D6E8DB;
     --fourth-color: #FFF8DE;
-    --fifth-color: #F6FBF4; /* Background */
+    --fifth-color: #F0F0F0; /* Background */
 
     /* Dark Color */
+
+    /* Base Green Color */
+    --first-g-color: #617143;
+    --second-g-color: #609966;
+    --third-g-color: #03C988;
+    --fourth-g-color: #395144;
 
     /* Text Color */
     --text-color-semi-black: #282A3A; /* Semi Black - Color */
