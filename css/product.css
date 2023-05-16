@@ -1,0 +1,53 @@
+@import url('1_global.css');
+@import url('1_navigaton_bar.css');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    height: 200vh;
+}
+
+.navigation-bar-container {
+    margin-top: 2%;
+}
+
+.page-container {
+    width: 100%;
+    color: var(--text-green);
+}
+
+.product-header {
+    width: 100%;
+    margin-top: 2%;
+}
+
+#header-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3em;
+    letter-spacing: 2px;
+    margin-bottom: 3%;
+}
+
+.category-grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 100%;
+}
+
+.grid-category {
+    text-align: center;
+    padding: 3%;
+    border-bottom: 2px solid #dbdbdb;
+    color: #dbdbdb;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.grid-category:hover {
+    color: var(--text-green);
+    border-bottom: 2px solid black;
+}
+
+.grid-category.active {
+    color: var(--text-green);
+    border-bottom: 2px solid var(--text-green);
+}

@@ -1,10 +1,5 @@
 @import url('1_global.css');
-
-body {
-    background-color: var(--fifth-color);
-    padding-left: 7%;
-    padding-right: 7%;
-}
+@import url('1_navigaton_bar.css');
 
 .user-header {
     display: flex;
@@ -33,6 +28,9 @@ body {
     text-align: right;
 }
 
+.navigation-bar-container {
+    margin-top: 3%;
+}
 
 /* Is User Login */
 .user-login {
@@ -50,43 +48,6 @@ body {
 .user-method:nth-child(2) {
     background-color: var(--first-g-color);
     color: white;
-}
-
-.navigation-bar-container {
-    width: 100%;
-    position: relative;
-    margin-top: 3%;
-}
-
-nav {
-    width: 100%;
-    display: flex;
-}
-
-ul {
-    width: 100%;
-    display: flex;
-    list-style: none;
-    justify-content: right;
-}
-
-ul a:not(:nth-child(1)) {
-    margin-left: 2%;
-}
-
-ul a {
-    text-decoration: none;
-    color: var(--text-color-semi-black);
-    font-weight: 600;
-    letter-spacing: 0.7px;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-    padding: 0.4%;
-}
-
-ul a:hover {
-    background-color: var(--fourth-g-color);
-    color: var(--text-color-semi-white);
 }
 
 .slider-container {

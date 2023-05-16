@@ -7,6 +7,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    padding-left: 7%;
+    padding-right: 7%;
+    background-color: var(--fifth-color);
+}
+
 :root{
 
     /* Light Color */
@@ -23,8 +29,11 @@
     --second-g-color: #609966;
     --third-g-color: #03C988;
     --fourth-g-color: #395144;
+    --fifth-g-color: #CEE5D0;
 
     /* Text Color */
     --text-color-semi-black: #282A3A; /* Semi Black - Color */
     --text-color-semi-white : #F7F7F7;
+    --text-on-light-component: #464b66;
+    --text-green: #939B62;
 }
