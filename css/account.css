@@ -1,0 +1,23 @@
+@import url('1_global.css');
+@import url('1_navigaton_bar.css');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.navigation-bar-container {
+    margin-top: 10px;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.account-details-side {
+    flex: 75%;
+    width: 100%;
+}

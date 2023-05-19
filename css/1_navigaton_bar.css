@@ -1,3 +1,75 @@
+.user-header {
+    display: flex;
+    width: 100%;
+    align-items : center;
+    margin-top: 1%;
+    color: var(--text-color-semi-black);
+}
+
+#user-hello {
+    font-weight: bold;
+    letter-spacing: 1.4px;
+}
+
+.section1-header {
+    flex: 25%;
+}
+
+.section2-header {
+    flex: 50%;
+    text-align: center;
+}
+
+.section3-header {
+    flex: 25%;
+    text-align: right;
+}
+
+.navigation-bar-container {
+    margin-top: 3%;
+}
+
+/* Is User Login */
+.user-login {
+    /* display: none; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    float: right;
+    width: max-content;
+}
+
+#user-photos {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#shopping-cart {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    margin-right: 10%;
+}
+
+.user-not-login {
+    display: none;
+}
+
+.user-method {
+    padding: 2%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.user-method:nth-child(2) {
+    background-color: var(--first-g-color);
+    color: white;
+}
+
 .navigation-bar-container {
     width: 100%;
     position: relative;
@@ -8,18 +80,18 @@ nav {
     display: flex;
 }
 
-ul {
+#navigation-ul {
     width: 100%;
     display: flex;
     list-style: none;
     justify-content: right;
 }
 
-ul a:not(:nth-child(1)) {
+#navigation-ul a:not(:nth-child(1)) {
     margin-left: 2%;
 }
 
-ul a {
+#navigation-ul a {
     text-decoration: none;
     color: var(--text-color-semi-black);
     font-weight: 600;
@@ -29,7 +101,67 @@ ul a {
     padding: 0.4%;
 }
 
-ul a:hover {
+#navigation-ul a:hover {
     background-color: var(--fourth-g-color);
     color: var(--text-color-semi-white);
+}
+
+.account-page-sidebar {
+    flex: 25%;
+    width: 100%;
+}
+
+#account-sidebar {
+    display: flex;
+    flex-direction: column;
+    padding: 8%;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: max-content;
+}
+
+#account-sidebar > li:not(:nth-child(1)) {
+    margin-top: 4%;
+}
+
+#account-sidebar > li {
+    list-style: none;
+    width: 100%;
+}
+
+#account-sidebar li > a {
+    display: block;
+    width: 100%;
+    padding: 2%;
+    text-decoration: none;
+    color: var(--text-color-semi-black);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#account-sidebar li > a:hover {
+    background-color: var(--third-g-color);
+    color: var(--text-color-semi-white);
+}
+
+#account-sidebar li > a.active {
+    background-color: var(--third-g-color);
+    color: var(--text-color-semi-white);
+}
+
+#signout-sidebar {
+    color: red;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    padding: 1.9%;
+    width: 100%;
+    border: 1px solid red;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#signout-sidebar:hover {
+    color: var(--text-color-semi-white);
+    background-color: red;
 }
