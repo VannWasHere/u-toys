@@ -8,16 +8,28 @@ body {
 }
 
 .navigation-bar-container {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .grid-container {
     display: flex;
     flex-direction: row;
-    align-items: center;
 }
 
 .account-details-side {
     flex: 75%;
+    padding-left: 1.8%;
     width: 100%;
+}
+
+.profile-images-grid{
+    
+}
+
+#user-photos {
+    transition: all 0.3s ease;
+}
+
+#user-photos:hover{
+    transform: scale(1.03);
 }
