@@ -23,7 +23,9 @@ body {
 }
 
 .profile-images-grid{
-    
+    display: grid;
+    grid-template-columns: max-content auto;
+    align-items: center;
 }
 
 #user-photos {
@@ -32,4 +34,69 @@ body {
 
 #user-photos:hover{
     transform: scale(1.03);
+}
+
+#username {
+    margin-left: 2%;
+    float: left;
+    letter-spacing: 1px;
+}
+
+.user-form-grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.user-leftside-profile>.input-container{
+    margin-bottom: 4%;
+}
+
+.user-rightside-profile>.input-container {
+    margin-bottom: 4%;
+}
+
+.user-leftside-profile>.input-container:nth-child(1) {
+    margin-top: 1%;
+}
+
+.user-rightside-profile>.input-container:nth-child(1) {
+    margin-top: 1%;
+}
+
+
+.profile-input {
+    width: 95%;
+    padding: 1.5%;
+    margin-top: 1%;
+    border-radius: 5px;
+    border: none;
+    -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    transition: 0.3s;
+}
+
+.profile-input:hover {
+    transform: scale(1.008);
+}
+
+#address-textarea {
+    width: 100%;
+}
+
+#profile-save-changes {
+    cursor: pointer;
+    margin-top: 1%;
+    float: right;
+    padding: 1%;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--third-g-color);
+    color: var(--text-color-semi-white);
+    box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    transition: all 0.3s ease;
+}
+
+#profile-save-changes:hover {
+    transform: skewY(2deg);
 }

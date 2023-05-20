@@ -50,7 +50,62 @@
                         <div class="account-images-container">
                             <img src="https://cdn0-production-images-kly.akamaized.net/dRlCPAybKFVW0XiDmLuO4RJriE4=/1200x1200/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/4119862/original/065226400_1660189533-i_m_Groot.jpg" id="user-photos" alt="profile">
                         </div>
+                        <p id="username">Justine Donovan</p>
                     </section>
+                    <hr>
+
+                    <!-- User Profile Info -->
+                    <section class="user-profile-info">
+
+                        <form action="" method="POST">
+                            <div class="user-form-grid-container">
+
+                                <!-- Left Grid -->
+                                <div class="user-leftside-profile">
+
+                                    <div class="input-container">
+                                        <label for="first-name" class="profile-label">First Name</label> <br>
+                                        <input type="text" class="profile-input" name="first_name" placeholder="First Name" autocomplete="off"> <br>                                    
+                                    </div>
+
+                                    <div class="input-container">
+                                        <label for="email-address" class="profile-label">Email</label> <br>
+                                        <input type="text" class="profile-input" name="email" placeholder="Your Email" autocomplete="off"> <br>                     
+                                    </div>
+
+                                    <div class="input-container">
+                                        <label for="zip-code" class="profile-label">Zip Code</label> <br>
+                                        <input type="number" class="profile-input" name="zipcode" placeholder="Your Zip Code Area" autocomplete="off"> <br>                     
+                                    </div>
+
+                                </div>
+
+                                <!-- Right Grid -->
+                                <div class="user-rightside-profile">
+
+                                    <div class="input-container">
+                                        <label for="last-name" class="profile-label">Last Name</label> <br>
+                                        <input type="text" class="profile-input" name="last_name" placeholder="Last Name" autocomplete="off"> <br>                   
+                                    </div>
+
+                                    <div class="input-container">
+                                        <label for="phone-number" class="profile-label">Phone Number</label> <br>
+                                        <input type="number" class="profile-input" name="phone_number" placeholder="Your Phone Number" autocomplete="off"> <br>                   
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="input-container">
+                                <label for="address" class="profile-label">Address</label><br>
+                                <textarea name="address" class="profile-input" id="address-textarea" cols="2" rows="4"></textarea>
+                            </div>
+
+                            <button type="submit" id="profile-save-changes">Save Changes</button>
+                        </form>
+                    </section>
+
                 </div>
             </div>
 
