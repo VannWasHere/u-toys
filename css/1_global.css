@@ -11,6 +11,10 @@ body {
     background-color: var(--fifth-color);
 }
 
+br {
+    user-select: none;
+}
+
 :root{
 
     /* Light Color */

@@ -1,8 +1,69 @@
 @import url('1_global.css');
 @import url('1_navigaton_bar.css');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
 
 body {
     padding-left: 7%;
     padding-right: 7%;
+}
+
+.product-details-grid {
+    margin-top: 3.5%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 45% auto;
+    grid-column-gap: 1%;
+    height: auto;
+}
+
+.product-details-left {
+    text-align: center;
+    align-self: self-start;
+    position: sticky;
+    top: 0;
+}
+
+.product-details-right {
+    width: 100%;
+}
+
+#product-images {
+    width: 500px;
+    user-select: none;
+    mix-blend-mode: multiply;
+}
+
+.product-details-left img {
+
+}
+
+#product-title {
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    font-family: 'Concert One', cursive;
+}
+
+#product-details {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#product-prices {
+    margin-top: 1%;
+}
+
+.button-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.button-wrapper>button {
+    cursor: pointer;
+    padding: 1.6%;
+    width: 100%;
+}
+
+.button-wrapper>button:nth-child(1) {
+
 }
