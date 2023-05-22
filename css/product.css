@@ -87,6 +87,11 @@ body {
     flex: 25%;
 }
 
+#product-card {
+    text-decoration: none;
+    color: var(--text-green);
+}
+
 .product-grid-card-container {
     flex: 75%;
     display: grid;
