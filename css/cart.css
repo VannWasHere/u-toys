@@ -1,0 +1,8 @@
+@import url('1_global.css');
+@import url('1_navigaton_bar.css');
+@import url('1_card.css');
+
+body {
+    padding-left: 7%;
+    padding-right: 7%;
+}
