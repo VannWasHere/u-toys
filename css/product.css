@@ -87,18 +87,9 @@ body {
     flex: 25%;
 }
 
-#product-card {
-    text-decoration: none;
-    color: var(--text-green);
-}
-
 .product-grid-card-container {
     flex: 75%;
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-gap: 10px;
-}
-
-.card-container {
-    padding: 2%;
 }

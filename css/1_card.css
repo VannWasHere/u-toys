@@ -3,11 +3,8 @@
     padding: 2%;
     cursor: pointer;
     border-radius: 8px;
+    border: 2px solid rgba(75, 75, 75, 0.301);
     transition: all 0.3s ease-in;
-}
-
-.card-container:hover {
-    box-shadow: 7px 5px 10px -3px rgba(71,27,27,0.75);
 }
 
 .product-images-container {
@@ -35,7 +32,6 @@
 .product-category {
     font-size: 0.7em;
 }
-
 
 .product-price {
     font-size: 0.7em;
@@ -73,4 +69,14 @@
 
 .add-to-cart:hover {
     transform: translateX(-5px);
+}
+
+#product-card {
+    width: max-content;
+    text-decoration: none;
+    color: var(--text-green);
+}
+
+.card-container {
+    padding: 2%;
 }

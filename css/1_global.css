@@ -22,7 +22,8 @@ br {
     --secondary-color: #C1D0B5;
     --third-color: #D6E8DB;
     --fourth-color: #FFF8DE;
-    --fifth-color: #F0F0F0; /* Background */
+    --fifth-color: #f4f4f4; /* Background */
+    --yellow-color: #FFD93D;
 
     /* Dark Color */
 
@@ -38,4 +39,5 @@ br {
     --text-color-semi-white : #F7F7F7;
     --text-on-light-component: #464b66;
     --text-green: #939B62;
+    --text-light-green: rgb(0, 187, 0);
 }

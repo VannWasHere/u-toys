@@ -8,6 +8,7 @@
 
     <!-- Local CSS -->
     <link rel="stylesheet" href="css/product_details.css">
+
 </head>
 <body>
     <!-- User Interface -->
@@ -20,7 +21,7 @@
         </div>
         <div class="section3-header">
             <div class="user-login">
-                <img src="saved-icon/cart-shopping-solid.svg" id="shopping-cart" alt="shopping-cart">
+                <a href="cart.html" style="margin-right: 10%;"><img src="saved-icon/cart-shopping-solid.svg" id="shopping-cart" alt="shopping-cart"></a>
                 <a href="account.html"><img src="https://cdn0-production-images-kly.akamaized.net/dRlCPAybKFVW0XiDmLuO4RJriE4=/1200x1200/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/4119862/original/065226400_1660189533-i_m_Groot.jpg" id="user-photos" alt="userprofile"></a>
             </div>
             <div class="user-not-login">
@@ -46,39 +47,261 @@
     </div>
     
     <section class="product-detail-container">
-
-        <div class="product-details-grid">
+        <div class="product-details-flex">
 
             <!-- Left Grid -->
             <div class="product-details-left">
                 <div class="images-container">
-                    <br><br>
-                    <img id="product-images" src="https://www.hasbro.com/common/productimages/en_US/F0B755ADAA58413392BC01E10A19816B/6506487c84cc369fc93df96014864612b6a28867.jpg" alt="Board Game">
+                    <img id="product-images" src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="Board Game">
                     <br><br>
                 </div>
             </div>
 
+
+            <!-- Middle Grid -->
+            <div class="product-details-middle">
+
+                <p style="letter-spacing: 1px; color: rgb(159, 149, 149);">Board Game</p>
+                <h1 style="margin-top: 1.5%; text-transform: uppercase; letter-spacing: 0.8px;">Logo The Board Game</h1>
+                <p id="product-prices">IDR 90.000,00</p>
+                <hr>
+
+                <details open>
+                    <summary style="margin-top: 2%; user-select: none;">About Product</summary>
+                    <p id="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sunt cupiditate exercitationem? Distinctio unde aliquam suscipit totam sed minima deleniti, natus incidunt corrupti nam culpa error officiis? Molestiae repellendus quaerat, perferendis sint commodi id architecto quos harum blanditiis dolor saepe repudiandae dolorem ullam necessitatibus illum quo tempore in, non ut asperiores. Debitis soluta, voluptas nostrum ipsam et sint veniam facere optio facilis obcaecati eius, officiis similique recusandae! Eaque, enim repellat!</p>
+                </details>
+
+                <div class="shipping-option-container">
+                    <p style="margin-top: 1%; letter-spacing: 1px; color: rgb(159, 149, 149);">Shipping To</p>
+                    <select name="" id="shipping-option">
+                        <option value="" selected>Select One</option>
+                        <option value="">Jalan Jayakarta No 18, Bogor</option>
+                        <option value="">Perumahan Kanguru Jalan Mamalia No 9, Kota Tangerang</option>
+                    </select>
+                </div>
+
+            </div>
 
             <!-- Right Grid -->
             <div class="product-details-right">
-                <div class="details-container">
-                    <p id="product-title">Clue Board Game</p>
-                    <p id="product-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ea culpa repellat ipsa beatae temporibus. Dolores fugiat alias incidunt ex necessitatibus nobis eveniet illo, veniam soluta optio a, amet quaerat?</p>
+                
+                <div class="order-summary-container">
+                    <p style="font-weight: 600; padding-bottom: 1%; user-select: none;">Order Summary</p>
                     <hr>
 
-                    <div class="button-wrapper">
-                        <button type="button">Add to Cart</button>
-                        <button type="button">Place Order</button>
-                    </div>
+                    <div class="flex-summary-container">
 
+                        <div class="quantity-container">
+                            <p class="p-summary">Quantity</p>
+                            <div class="number-container">
+                                <button type="button" class="add-min-button" id="min-buttons">-</button>
+                                <input type="number" id="quantity-number" value="1" readonly>
+                                <button type="button" class="add-min-button" id="add-buttons">+</button>
+                            </div>
+                        </div>
+
+                        <div class="price-container">
+                            <p class="p-summary">Prices</p>
+                            <p class="p-summary" id="prices">IDR 90000</p>
+                        </div>
+
+                        <div class="buttons-container">
+                            <button type="button" id="add-tocart-button">Add to Cart</button>
+                            <button type="button" id="order-button">Place Order</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
     </section>
+
+    <div class="more-likethis-product">
+        <div class="product-items-container">
+            <div class="product-sidebar">
+                <p style="letter-spacing: 1px; margin-bottom: 1%;"> <b>More Like LOGO THE BOARD GAME</b> </p>
+            </div>
+            <div class="product-grid-card-container">
+
+                <div class="card-container">
+                    <a href="product_details.html" id="product-card">
+                        <div class="product-images-container">
+                            <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
+                        </div>
+                        <div class="product-description">
+                            <p class="product-name">Logo the Board Game</p>
+                            <p class="product-category">Board Game</p>
+                            <p class="product-price">Rp.90.000,00</p>
+                            <div class="detail-and-addcart">
+                                <button type="button" class="see-details-button">See Detail</button>
+                                <p class="add-to-cart">Add to Cart</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card-container">
+                    <a href="product_details.html" id="product-card">
+                        <div class="product-images-container">
+                            <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
+                        </div>
+                        <div class="product-description">
+                            <p class="product-name">Logo the Board Game</p>
+                            <p class="product-category">Board Game</p>
+                            <p class="product-price">Rp.90.000,00</p>
+                            <div class="detail-and-addcart">
+                                <button type="button" class="see-details-button">See Detail</button>
+                                <p class="add-to-cart">Add to Cart</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card-container">
+                    <a href="product_details.html" id="product-card">
+                        <div class="product-images-container">
+                            <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
+                        </div>
+                        <div class="product-description">
+                            <p class="product-name">Logo the Board Game</p>
+                            <p class="product-category">Board Game</p>
+                            <p class="product-price">Rp.90.000,00</p>
+                            <div class="detail-and-addcart">
+                                <button type="button" class="see-details-button">See Detail</button>
+                                <p class="add-to-cart">Add to Cart</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card-container">
+                    <a href="product_details.html" id="product-card">
+                        <div class="product-images-container">
+                            <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
+                        </div>
+                        <div class="product-description">
+                            <p class="product-name">Logo the Board Game</p>
+                            <p class="product-category">Board Game</p>
+                            <p class="product-price">Rp.90.000,00</p>
+                            <div class="detail-and-addcart">
+                                <button type="button" class="see-details-button">See Detail</button>
+                                <p class="add-to-cart">Add to Cart</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card-container">
+                    <a href="product_details.html" id="product-card">
+                        <div class="product-images-container">
+                            <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
+                        </div>
+                        <div class="product-description">
+                            <p class="product-name">Logo the Board Game</p>
+                            <p class="product-category">Board Game</p>
+                            <p class="product-price">Rp.90.000,00</p>
+                            <div class="detail-and-addcart">
+                                <button type="button" class="see-details-button">See Detail</button>
+                                <p class="add-to-cart">Add to Cart</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card-container">
+                    <a href="product_details.html" id="product-card">
+                        <div class="product-images-container">
+                            <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
+                        </div>
+                        <div class="product-description">
+                            <p class="product-name">Logo the Board Game</p>
+                            <p class="product-category">Board Game</p>
+                            <p class="product-price">Rp.90.000,00</p>
+                            <div class="detail-and-addcart">
+                                <button type="button" class="see-details-button">See Detail</button>
+                                <p class="add-to-cart">Add to Cart</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card-container">
+                    <a href="product_details.html" id="product-card">
+                        <div class="product-images-container">
+                            <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
+                        </div>
+                        <div class="product-description">
+                            <p class="product-name">Logo the Board Game</p>
+                            <p class="product-category">Board Game</p>
+                            <p class="product-price">Rp.90.000,00</p>
+                            <div class="detail-and-addcart">
+                                <button type="button" class="see-details-button">See Detail</button>
+                                <p class="add-to-cart">Add to Cart</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="card-container">
+                    <a href="product_details.html" id="product-card">
+                        <div class="product-images-container">
+                            <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
+                        </div>
+                        <div class="product-description">
+                            <p class="product-name">Logo the Board Game</p>
+                            <p class="product-category">Board Game</p>
+                            <p class="product-price">Rp.90.000,00</p>
+                            <div class="detail-and-addcart">
+                                <button type="button" class="see-details-button">See Detail</button>
+                                <p class="add-to-cart">Add to Cart</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card-container">
+                    <a href="product_details.html" id="product-card">
+                        <div class="product-images-container">
+                            <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
+                        </div>
+                        <div class="product-description">
+                            <p class="product-name">Logo the Board Game</p>
+                            <p class="product-category">Board Game</p>
+                            <p class="product-price">Rp.90.000,00</p>
+                            <div class="detail-and-addcart">
+                                <button type="button" class="see-details-button">See Detail</button>
+                                <p class="add-to-cart">Add to Cart</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card-container">
+                    <a href="product_details.html" id="product-card">
+                        <div class="product-images-container">
+                            <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
+                        </div>
+                        <div class="product-description">
+                            <p class="product-name">Logo the Board Game</p>
+                            <p class="product-category">Board Game</p>
+                            <p class="product-price">Rp.90.000,00</p>
+                            <div class="detail-and-addcart">
+                                <button type="button" class="see-details-button">See Detail</button>
+                                <p class="add-to-cart">Add to Cart</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 
     <!-- Javascript Link -->
     <script src="https://kit.fontawesome.com/e67bdeab51.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/quantityNumber_and_PriceCalculation.js"></script>
+
 </body>
 </html>
