@@ -143,7 +143,8 @@ body {
 
 #order-button {
     margin-top: 2%;
-    border: 1px solid black;
+    background-color: #19A7CE;
+    color: var(--text-color-semi-white);
 }
 
 .card-container {

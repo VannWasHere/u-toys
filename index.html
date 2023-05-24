@@ -4,53 +4,214 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Home</title>
 
     <!-- Local CSS -->
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/home.css">
+
+    <!-- Link JS -->
+    <script src="js/carousel.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="image-login">
-            <img src="https://images.unsplash.com/photo-1553517491-0d108eea9147?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1228&q=80" class="cover" alt="Toys Images">
+    <!-- User Interface -->
+    <div class="user-header">
+        <div class="section1-header">
+            <h3 id="user-hello">Hello, User!</h3>
         </div>
-        <div class="form-login">
-            <div class="login-header">
-                <h2 id="login-h2">Welcome to U-Toys!</h2>
-                <h3 id="slogan-h3">Hip Hip Hura Hura</h3>
-            </div>
-
-            <!-- Login Form -->
-            <div class="login-form">
-                <form action="" method="post">
-                    <input type="text" class="login-input" name="username" id="input-username" autocomplete="off" placeholder="Username or Email" required> <br>
-                    <input type="password" class="login-input" name="password" id="input-password" autocomplete="off" placeholder="Password" required>
-                    <p id="forgot-password">Forgot Password?</p>
-
-                    <!-- Submit Button -->
-                    <button type="button" id="login-button" onclick="location.href='home.html'">Sign In</button>
-                </form>
-            </div>
-            <p id="register">If you don't have an account, <a href="register.html" style="cursor: pointer; color: #282A3A;">click here</a> to register!</p>
+        <div class="section2-header">
+            <h2>U-Toys</h2>
         </div>
+        <div class="section3-header">
+            <div class="user-login">
+                <a href="cart.html" style="margin-right: 10%;"><img src="saved-icon/cart-shopping-solid.svg" id="shopping-cart" alt="shopping-cart"></a>
+                <a href="account.html"><img src="https://cdn0-production-images-kly.akamaized.net/dRlCPAybKFVW0XiDmLuO4RJriE4=/1200x1200/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/4119862/original/065226400_1660189533-i_m_Groot.jpg" id="user-photos" alt="userprofile"></a>
+            </div>
+            <div class="user-not-login">
+                <button type="button" class="user-method">Sign In</button>
+                <button type="button" class="user-method">Sign Up</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar Container -->
+    <div class="navigation-bar-container">
+        <nav>
+            <div class="logo">
+                <h2>Logo</h2>
+            </div>
+            <ul id="navigation-ul">
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="product.html">Product</a>
+                <a href="">Contact Us</a>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Carousel Container -->
+    <div class="slider-container">
+        <div class="images-sec-container">
+            <div class="images-slide fade-animation">
+                <img src="https://images3.alphacoders.com/823/82317.jpg" alt="image1" class="image-content">
+            </div>
+            <div class="images-slide another fade-animation">
+                <img src="https://images.alphacoders.com/475/475967.jpg" alt="image2" class="image-content">
+            </div>
+            <div class="images-slide another fade-animation">
+                <img src="https://images3.alphacoders.com/147/147799.jpg" alt="image3" class="image-content">
+            </div>
+            
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="nextSlide(1)">&#10094;</a>
+            <a class="next" onclick="prevSlide(1)">&#10095;</a>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <div class="home-products-category">
+            <h1 class="home-products-h1">Products Category</h1>
+            <div class="home-products-category-container">
+                <!-- Examples -->
+                <div class="category-examples">Products 1</div>
+                <div class="category-examples">Products 2</div>
+                <div class="category-examples">Products 3</div>
+                <div class="category-examples">Products 4</div>
+            </div>
+        </div>
+        <div class="home-products">
+            <h1 class="home-products-h1">Our Products</h1>
+            <div class="product-grid-card-container">
+                <div class="card-container">
+                    <div class="product-images-container">
+                        <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
+                    </div>
+                    <div class="product-description">
+                        <p class="product-name">Logo the Board Game</p>
+                        <p class="product-category">Board Game</p>
+                        <p class="product-price">Rp.90.000,00</p>
+                        <div class="detail-and-addcart">
+                            <button type="button" class="see-details-button">See Detail</button>
+                            <p class="add-to-cart">Add to Cart</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-container">
+                    <div class="product-images-container">
+                        <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
+                    </div>
+                    <div class="product-description">
+                        <p class="product-name">Logo the Board Game</p>
+                        <p class="product-category">Board Game</p>
+                        <p class="product-price">Rp.90.000,00</p>
+                        <div class="detail-and-addcart">
+                            <button type="button" class="see-details-button">See Detail</button>
+                            <p class="add-to-cart">Add to Cart</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-container">
+                    <div class="product-images-container">
+                        <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
+                    </div>
+                    <div class="product-description">
+                        <p class="product-name">Logo the Board Game</p>
+                        <p class="product-category">Board Game</p>
+                        <p class="product-price">Rp.90.000,00</p>
+                        <div class="detail-and-addcart">
+                            <button type="button" class="see-details-button">See Detail</button>
+                            <p class="add-to-cart">Add to Cart</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-container">
+                    <div class="product-images-container">
+                        <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
+                    </div>
+                    <div class="product-description">
+                        <p class="product-name">Logo the Board Game</p>
+                        <p class="product-category">Board Game</p>
+                        <p class="product-price">Rp.90.000,00</p>
+                        <div class="detail-and-addcart">
+                            <button type="button" class="see-details-button">See Detail</button>
+                            <p class="add-to-cart">Add to Cart</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-container">
+                    <div class="product-images-container">
+                        <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
+                    </div>
+                    <div class="product-description">
+                        <p class="product-name">Logo the Board Game</p>
+                        <p class="product-category">Board Game</p>
+                        <p class="product-price">Rp.90.000,00</p>
+                        <div class="detail-and-addcart">
+                            <button type="button" class="see-details-button">See Detail</button>
+                            <p class="add-to-cart">Add to Cart</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-container">
+                    <div class="product-images-container">
+                        <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
+                    </div>
+                    <div class="product-description">
+                        <p class="product-name">Logo the Board Game</p>
+                        <p class="product-category">Board Game</p>
+                        <p class="product-price">Rp.90.000,00</p>
+                        <div class="detail-and-addcart">
+                            <button type="button" class="see-details-button">See Detail</button>
+                            <p class="add-to-cart">Add to Cart</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-container">
+                    <div class="product-images-container">
+                        <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
+                    </div>
+                    <div class="product-description">
+                        <p class="product-name">Logo the Board Game</p>
+                        <p class="product-category">Board Game</p>
+                        <p class="product-price">Rp.90.000,00</p>
+                        <div class="detail-and-addcart">
+                            <button type="button" class="see-details-button">See Detail</button>
+                            <p class="add-to-cart">Add to Cart</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-container">
+                    <div class="product-images-container">
+                        <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
+                    </div>
+                    <div class="product-description">
+                        <p class="product-name">Logo the Board Game</p>
+                        <p class="product-category">Board Game</p>
+                        <p class="product-price">Rp.90.000,00</p>
+                        <div class="detail-and-addcart">
+                            <button type="button" class="see-details-button">See Detail</button>
+                            <p class="add-to-cart">Add to Cart</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-footer">
+        <footer>
+            
+        </footer>
     </div>
 
     <!-- Javascript Link -->
     <script src="https://kit.fontawesome.com/e67bdeab51.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- JQuery Code -->
-    <script>
-        $('#input-username, #input-password').on('input', function() {
-            var username = $('#input-username').val();
-            var password = $('#input-password').val();
-
-            if (username !== '' && password !== '') {
-                $('#login-button').addClass('active');
-            } else {
-                $('#login-button').removeClass('active');
-            }
-        });
-    </script>
 </body>
 </html>
