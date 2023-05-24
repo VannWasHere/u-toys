@@ -5,3 +5,14 @@ body {
     padding-left: 7%;
     padding-right: 7%;
 }
+
+.logo-about-us {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+}
