@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-
+    
     <!-- Local CSS -->
     <link rel="stylesheet" href="css/register.css">
 </head>
@@ -20,14 +20,14 @@
 
             <!-- Register Form -->
             <div class="register-form">
-                <form action="" method="post">
+                <form action="php/register_process.php" method="post">
                     <input type="text" name="username" class="register-input" id="username-input" placeholder="Username" required autocomplete="off"><br>
                     <input type="email" name="email" class="register-input" id="email-input" placeholder="Email" required autocomplete="off"><br>
                     <input type="password" name="password" class="register-input" id="password-input" placeholder="Password" required autocomplete="off"><br>
                     <p id="password-manager"></p>
                     <input type="password" class="register-input" id="sec-password-input" placeholder="Re-enter Password" required autocomplete="off"><br>
 
-                    <button type="button" id="register-button" disabled>Sign Up</button>
+                    <button type="submit" id="register-button" disabled>Sign Up</button>
                 </form>
             </div>
         </div>
@@ -42,18 +42,24 @@
         $('#password-input, #sec-password-input').on('input', function() {
             var first_password = $('#password-input').val();
             var second_password = $('#sec-password-input').val();
+            var register_button = $('#register-button');
 
-            if(first_password !== '' && second_password != '') {
-                if(first_password === second_password) {
+            if (first_password !== '' && second_password !== '') {
+                if (first_password === second_password) {
                     $('#password-input, #sec-password-input').addClass('same');
                     $('#password-input, #sec-password-input').removeClass('different');
+                    register_button.prop('disabled', false); // Enable the button
                 } else {
                     $('#password-input, #sec-password-input').addClass('different');
                     $('#password-input, #sec-password-input').removeClass('same');
+                    register_button.prop('disabled', true); // Disable the button
                 }
+            } else {
+                register_button.prop('disabled', true); // Disable the button if any of the inputs is empty
             }
         });
     </script>
+
 
     <script>
         $('#password-input').on('input', function() {

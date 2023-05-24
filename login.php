@@ -22,16 +22,16 @@
 
             <!-- Login Form -->
             <div class="login-form">
-                <form action="" method="post">
+                <form action="php/login_process.php" method="post">
                     <input type="text" class="login-input" name="username" id="input-username" autocomplete="off" placeholder="Username or Email" required> <br>
                     <input type="password" class="login-input" name="password" id="input-password" autocomplete="off" placeholder="Password" required>
                     <p id="forgot-password">Forgot Password?</p>
 
                     <!-- Submit Button -->
-                    <button type="button" id="login-button" onclick="location.href='home.html'">Sign In</button>
+                    <button type="submit" id="login-button">Sign In</button>
                 </form>
             </div>
-            <p id="register">If you don't have an account, <a href="register.html" style="cursor: pointer; color: #282A3A;">click here</a> to register!</p>
+            <p id="register">If you don't have an account, <a href="register.php" style="cursor: pointer; color: #282A3A;">click here</a> to register!</p>
         </div>
     </div>
 
