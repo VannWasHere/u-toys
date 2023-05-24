@@ -1,4 +1,5 @@
 <?php
+session_start();
 require '1_conn.php';
 
 // Variable
@@ -13,8 +14,10 @@ if(mysqli_num_rows($checking_row) === 1) {
 
     if(password_verify($password, $row['password'])) {
         // Start Session
-
-        header("Location: ../index.html");
+        $user_id = $row['user_id'];
+        $_SESSION['login'] = TRUE;
+        $_SESSION['user_id'] = $user_id;
+        header("Location: ../index.php");
     } else {
         header("Location: ../login.php?login=wrongpassword");
     }

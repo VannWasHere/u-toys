@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+// Check the login status and set a PHP variable
+$loggedIn = isset($_SESSION["login"]) && $_SESSION["login"] === true;
+
+// Pass the login status to JavaScript
+echo "<script>var isLoggedIn = " . ($loggedIn ? "true" : "false") . ";</script>";
+
+session_destroy();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,41 +25,11 @@
     <script src="js/carousel.js"></script>
 </head>
 <body>
-    <!-- User Interface -->
-    <div class="user-header">
-        <div class="section1-header">
-            <h3 id="user-hello">Hello, User!</h3>
-        </div>
-        <div class="section2-header">
-            <h2>U-Toys</h2>
-        </div>
-        <div class="section3-header">
-            <div class="user-login">
-                <a href="cart.html" style="margin-right: 10%;"><img src="saved-icon/cart-shopping-solid.svg" id="shopping-cart" alt="shopping-cart"></a>
-                <a href="account.html"><img src="https://cdn0-production-images-kly.akamaized.net/dRlCPAybKFVW0XiDmLuO4RJriE4=/1200x1200/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/4119862/original/065226400_1660189533-i_m_Groot.jpg" id="user-photos" alt="userprofile"></a>
-            </div>
-            <div class="user-not-login">
-                <button type="button" class="user-method">Sign In</button>
-                <button type="button" class="user-method">Sign Up</button>
-            </div>
-        </div>
-    </div>
 
-    <!-- Navigation Bar Container -->
-    <div class="navigation-bar-container">
-        <nav>
-            <div class="logo">
-                <h2>Logo</h2>
-            </div>
-            <ul id="navigation-ul">
-                <a href="home.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="product.html">Product</a>
-                <a href="">Contact Us</a>
-            </ul>
-        </nav>
-    </div>
-
+<?php
+include 'component/header.php';
+include 'component/navigation_bar.php';
+?>
     <!-- Carousel Container -->
     <div class="slider-container">
         <div class="images-sec-container">
@@ -213,5 +195,6 @@
     <!-- Javascript Link -->
     <script src="https://kit.fontawesome.com/e67bdeab51.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/isLogin.js"></script>
 </body>
 </html>

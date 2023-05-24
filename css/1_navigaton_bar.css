@@ -31,12 +31,19 @@
 
 /* Is User Login */
 .user-login {
-    /* display: none; */
     display: flex;
     flex-direction: row;
     align-items: center;
     float: right;
     width: max-content;
+}
+
+.user-nav {
+    display: none;
+}
+
+.user-action {
+    display: block;
 }
 
 #user-photos {
@@ -50,10 +57,6 @@
     cursor: pointer;
     width: 25px;
     height: 25px;
-}
-
-.user-not-login {
-    display: none;
 }
 
 .user-method {
