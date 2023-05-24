@@ -6,3 +6,41 @@ body {
     padding-left: 7%;
     padding-right: 7%;
 }
+
+.cart-container {
+    margin-top: 2%;
+}
+
+.item-container {
+    display: grid;
+    grid-template-columns: 5% auto auto auto auto auto;
+    margin-top: 2%;
+    column-gap: 2%;
+}
+
+.title-container {
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.title-container>h4 {
+    text-align: center;
+}
+
+.order-summary {
+    padding: 3%;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.prices-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1%;
+}
+
+.p-cart {
+    font-weight: 500;
+}
