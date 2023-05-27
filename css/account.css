@@ -1,5 +1,6 @@
 @import url('1_global.css');
 @import url('1_navigaton_bar.css');
+@import url('1_account_manage.css');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 body {
@@ -7,25 +8,17 @@ body {
     padding-right: 7%;
 }
 
-.navigation-bar-container {
-    margin-top: 20px;
-}
 
-.grid-container {
-    display: flex;
-    flex-direction: row;
+.profile-images-grid{
+    display: grid;
+    grid-template-columns: max-content auto;
+    align-items: center;
 }
 
 .account-details-side {
     flex: 75%;
     padding-left: 1.8%;
     width: 100%;
-}
-
-.profile-images-grid{
-    display: grid;
-    grid-template-columns: max-content auto;
-    align-items: center;
 }
 
 #user-photos {

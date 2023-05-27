@@ -1,0 +1,8 @@
+.navigation-bar-container {
+    margin-top: 20px;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: row;
+}

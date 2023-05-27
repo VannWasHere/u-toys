@@ -1,0 +1,34 @@
+@import url('1_global.css');
+
+.admin-container {
+    width: 100%;
+}
+.admin-dashboard {
+    background-color: var(--first-g-color);
+    color: var(--text-color-semi-white);
+    padding: 1%;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+}
+
+.choices-container {
+    margin-top: 10%;
+}
+
+.choices {
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    padding: 3%;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.admin-content {
+    margin-left: 260px;
+}

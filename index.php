@@ -7,7 +7,6 @@ $loggedIn = isset($_SESSION["login"]) && $_SESSION["login"] === true;
 // Pass the login status to JavaScript
 echo "<script>var isLoggedIn = " . ($loggedIn ? "true" : "false") . ";</script>";
 
-session_destroy();
 ?>
 
 <!DOCTYPE html>

@@ -1,0 +1,68 @@
+@import url('1_global.css');
+@import url('1_navigaton_bar.css');
+@import url('1_account_manage.css');
+
+body {
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.add-address-form {
+    flex: 75%;
+    padding-left: 1.8%;
+    width: 100%;
+}
+
+.address-input {
+    width: 100%;
+    padding: 1%;
+    margin-top: 1%;
+    border-radius: 5px;
+    border: none;
+    -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+}
+
+.h4-title {
+    letter-spacing: 1px;
+}
+
+.input-container:not(:nth-child(1)) {
+    margin-top: 1.5%;
+}
+
+.location-form-container {
+    margin-top: 2%;
+}
+
+.location-form-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+}
+
+.left-location-form>.input-container>.address-input {
+    width: 96%;
+}
+
+#receiver-address{
+    width: 100%;
+    margin-top: 0.6%;
+    padding: 1%;
+    border-radius: 6px;
+    -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+}
+
+#submit-add-address {
+    cursor: pointer;
+    width: 100%;
+    padding: 1%;
+    margin-top: 1%;
+    border-radius: 6px;
+    border: none;
+    background-color: var(--third-g-color);
+    color: var(--text-color-semi-white);
+}
