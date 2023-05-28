@@ -1,11 +1,13 @@
 <?php
 session_start();
 require 'php/1_conn.php';
+require 'component/set_cookies.php';
 // Check the login status and set a PHP variable
 $loggedIn = isset($_SESSION["login"]) && $_SESSION["login"] === true;
 
 // Pass the login status to JavaScript
 echo "<script>var isLoggedIn = " . ($loggedIn ? "true" : "false") . ";</script>";
+
 
 ?>
 
@@ -65,7 +67,7 @@ include 'component/navigation_bar.php';
 
             <?php
 
-            $queries = mysqli_query($conn, "SELECT * FROM product LIMIT 8");
+            $queries = mysqli_query($conn, "SELECT * FROM product ORDER BY RAND() LIMIT 8");
             while($row = mysqli_fetch_array($queries)) {
                 echo "
                 <div class='card-container' onclick=\"location.href='product_details.php?id=$row[product_id]'\">
@@ -75,8 +77,8 @@ include 'component/navigation_bar.php';
                         </div>
                         <div class='product-description'>
                             <p class='product-name'>$row[product_name]</p>
-                            <p class='product-category'>$row[product_category]</p>
-                            <p class='product-price'>IDR $row[product_prices]</p>
+                            <p class='product-category' style='text-transform:uppercase;'>$row[product_category]</p>
+                            <p class='product-price product-prices'>IDR $row[product_prices]</p>
                             <div class='detail-and-addcart'>
                                 <button type='button' class='see-details-button'>See Detail</button>
                                 <p class='add-to-cart'>Add to Cart</p>
@@ -103,18 +105,7 @@ include 'component/navigation_bar.php';
     <script src="https://kit.fontawesome.com/e67bdeab51.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/isLogin.js"></script>
+    <script src="js/prices_formatter.js"></script>
 
-    <script>
-        var priceElements = document.querySelectorAll('.product-price');
-        priceElements.forEach(function(element) {
-            var price = element.textContent.trim().substring(4); // Extract the numeric value
-
-            // Convert the price to a number and add thousand separators with a dot
-            var formattedPrice = parseInt(price).toLocaleString('en-US', { useGrouping: true }).replace(/,/g, '.');
-
-            // Update the HTML content of each element with the formatted price
-            element.innerHTML = 'IDR ' + formattedPrice;
-        });
-    </script>
 </body>
 </html>

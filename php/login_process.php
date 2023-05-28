@@ -17,6 +17,10 @@ if(mysqli_num_rows($checking_row) === 1) {
         $user_id = $row['user_id'];
         $_SESSION['login'] = TRUE;
         $_SESSION['user_id'] = $user_id;
+        
+        setcookie('secret', $row['user_id'], time() + (5 * 24 * 60 * 60), '/', '', true, true);
+        setcookie('secret1', hash('sha256', $row['username']), time() + (5 * 24 * 60 * 60), '/', '', true, true);
+
         header("Location: ../index.php");
     } else {
         header("Location: ../login.php?login=wrongpassword");

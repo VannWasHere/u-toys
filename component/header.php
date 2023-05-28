@@ -1,6 +1,8 @@
     <!-- User Interface -->
     <?php
         include 'not_error.php';
+        $user_q = mysqli_query($conn, "SELECT username FROM user WHERE user_id = '$_SESSION[user_id]'");
+        $user_rows = mysqli_fetch_assoc($user_q);
     ?>
     <div class="user-header">
         <div class="section1-header">
@@ -8,9 +10,9 @@
             if ($_SESSION['user_id'] === NULL) {
                 echo "....";
             } else {
-                echo $_SESSION['user_id'];    
+                echo $user_rows['username'];
             }
-            ?></h3>
+            ?>!</h3>
         </div>
         <div class="section2-header">
             <h2>U-Toys</h2>

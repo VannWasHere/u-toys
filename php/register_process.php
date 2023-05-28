@@ -18,7 +18,7 @@ if(mysqli_num_rows($checking_duplicate) > 0) {
     header("Location: ../register.php?register=usernameoremailhasbeentaken");
     exit;
 } else {
-    $insert_user = mysqli_query($conn, "INSERT INTO user VALUES ('', '$username', '$email', NULL, '$hashed_password', NULL, NULL, NULL, '$date', NULL)");
+    $insert_user = mysqli_query($conn, "INSERT INTO user VALUES ('', '$username', '$email', NULL, '$hashed_password', NULL, NULL, '$date', NULL)");
     if($insert_user) {
         header("Location: ../login.php");
     } else {

@@ -1,6 +1,8 @@
 <?php
 session_start();
+require 'php/1_conn.php';
 include 'component/not_error.php';
+include 'component/set_cookies.php';
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +36,7 @@ include 'component/navigation_bar.php';
                     <li><a href="">Purchase History</a></li>
                     <li><a href="addAddress.html" class="active">Add Address</a></li>
                 <hr style="margin-top: 3%;">
-                <button type="button" id="signout-sidebar" onclick="location.href = 'index.html'">Sign Out</button>
+                <button type="button" id="signout-sidebar" onclick="location.href = 'php/1_signout_process.php'">Sign Out</button>
                 </ul>
             </div>
 
