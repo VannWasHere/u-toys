@@ -12,6 +12,9 @@ document.getElementById('add-buttons').onclick = function() {
 
     total = numbers * valueNumber;
     document.getElementById('prices').innerHTML = "IDR " + total;
+
+    // Autofill the input field with the updated total
+    document.getElementById('post_total_prices').value = total;
 }
 
 document.getElementById('min-buttons').onclick = function() {
@@ -26,4 +29,7 @@ document.getElementById('min-buttons').onclick = function() {
     total = numbers * valueNumber;
 
     document.getElementById('prices').innerHTML = "IDR " + total;
+
+    // Autofill the input field with the updated total
+    document.getElementById('post_total_prices').value = total;
 }
