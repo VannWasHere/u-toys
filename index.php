@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+require 'php/1_conn.php';
 // Check the login status and set a PHP variable
 $loggedIn = isset($_SESSION["login"]) && $_SESSION["login"] === true;
 
@@ -62,125 +62,33 @@ include 'component/navigation_bar.php';
         <div class="home-products">
             <h1 class="home-products-h1">Our Products</h1>
             <div class="product-grid-card-container">
-                <div class="card-container">
-                    <div class="product-images-container">
-                        <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
-                    </div>
-                    <div class="product-description">
-                        <p class="product-name">Logo the Board Game</p>
-                        <p class="product-category">Board Game</p>
-                        <p class="product-price">Rp.90.000,00</p>
-                        <div class="detail-and-addcart">
-                            <button type="button" class="see-details-button">See Detail</button>
-                            <p class="add-to-cart">Add to Cart</p>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="card-container">
-                    <div class="product-images-container">
-                        <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
-                    </div>
-                    <div class="product-description">
-                        <p class="product-name">Logo the Board Game</p>
-                        <p class="product-category">Board Game</p>
-                        <p class="product-price">Rp.90.000,00</p>
-                        <div class="detail-and-addcart">
-                            <button type="button" class="see-details-button">See Detail</button>
-                            <p class="add-to-cart">Add to Cart</p>
-                        </div>
-                    </div>
-                </div>
+            <?php
 
-                <div class="card-container">
-                    <div class="product-images-container">
-                        <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
-                    </div>
-                    <div class="product-description">
-                        <p class="product-name">Logo the Board Game</p>
-                        <p class="product-category">Board Game</p>
-                        <p class="product-price">Rp.90.000,00</p>
-                        <div class="detail-and-addcart">
-                            <button type="button" class="see-details-button">See Detail</button>
-                            <p class="add-to-cart">Add to Cart</p>
+            $queries = mysqli_query($conn, "SELECT * FROM product LIMIT 8");
+            while($row = mysqli_fetch_array($queries)) {
+                echo "
+                <div class='card-container' onclick=\"location.href='product_details.php?id=$row[product_id]'\">
+                    <a id='product-card'>
+                        <div class='product-images-container'>
+                            <img src='images/$row[product_photos]' alt='$row[product_name]' class='product-images'>
                         </div>
-                    </div>
-                </div>
+                        <div class='product-description'>
+                            <p class='product-name'>$row[product_name]</p>
+                            <p class='product-category'>$row[product_category]</p>
+                            <p class='product-price'>IDR $row[product_prices]</p>
+                            <div class='detail-and-addcart'>
+                                <button type='button' class='see-details-button'>See Detail</button>
+                                <p class='add-to-cart'>Add to Cart</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>   
+                ";
+            }
 
-                <div class="card-container">
-                    <div class="product-images-container">
-                        <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
-                    </div>
-                    <div class="product-description">
-                        <p class="product-name">Logo the Board Game</p>
-                        <p class="product-category">Board Game</p>
-                        <p class="product-price">Rp.90.000,00</p>
-                        <div class="detail-and-addcart">
-                            <button type="button" class="see-details-button">See Detail</button>
-                            <p class="add-to-cart">Add to Cart</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-container">
-                    <div class="product-images-container">
-                        <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
-                    </div>
-                    <div class="product-description">
-                        <p class="product-name">Logo the Board Game</p>
-                        <p class="product-category">Board Game</p>
-                        <p class="product-price">Rp.90.000,00</p>
-                        <div class="detail-and-addcart">
-                            <button type="button" class="see-details-button">See Detail</button>
-                            <p class="add-to-cart">Add to Cart</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-container">
-                    <div class="product-images-container">
-                        <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
-                    </div>
-                    <div class="product-description">
-                        <p class="product-name">Logo the Board Game</p>
-                        <p class="product-category">Board Game</p>
-                        <p class="product-price">Rp.90.000,00</p>
-                        <div class="detail-and-addcart">
-                            <button type="button" class="see-details-button">See Detail</button>
-                            <p class="add-to-cart">Add to Cart</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-container">
-                    <div class="product-images-container">
-                        <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
-                    </div>
-                    <div class="product-description">
-                        <p class="product-name">Logo the Board Game</p>
-                        <p class="product-category">Board Game</p>
-                        <p class="product-price">Rp.90.000,00</p>
-                        <div class="detail-and-addcart">
-                            <button type="button" class="see-details-button">See Detail</button>
-                            <p class="add-to-cart">Add to Cart</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-container">
-                    <div class="product-images-container">
-                        <img src="https://www.drumondpark.com/site/product/24/productimg1_540x529.png?crc=rt1wn4" alt="" class="product-images">
-                    </div>
-                    <div class="product-description">
-                        <p class="product-name">Logo the Board Game</p>
-                        <p class="product-category">Board Game</p>
-                        <p class="product-price">Rp.90.000,00</p>
-                        <div class="detail-and-addcart">
-                            <button type="button" class="see-details-button">See Detail</button>
-                            <p class="add-to-cart">Add to Cart</p>
-                        </div>
-                    </div>
-                </div>
+            ?>
+                
             </div>
         </div>
     </div>
@@ -195,5 +103,18 @@ include 'component/navigation_bar.php';
     <script src="https://kit.fontawesome.com/e67bdeab51.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/isLogin.js"></script>
+
+    <script>
+        var priceElements = document.querySelectorAll('.product-price');
+        priceElements.forEach(function(element) {
+            var price = element.textContent.trim().substring(4); // Extract the numeric value
+
+            // Convert the price to a number and add thousand separators with a dot
+            var formattedPrice = parseInt(price).toLocaleString('en-US', { useGrouping: true }).replace(/,/g, '.');
+
+            // Update the HTML content of each element with the formatted price
+            element.innerHTML = 'IDR ' + formattedPrice;
+        });
+    </script>
 </body>
 </html>
