@@ -28,9 +28,8 @@ if(isset($_POST['addOrder'])) {
     $product_name = $_POST['product_name'];
     $product_quantity = $_POST['product_quantity'];
     $total_prices = $_POST['total_prices'];
-    $user_address = $_POST['user_address'];
 
-    $addOrderQ = mysqli_query($conn, "INSERT INTO order_table VALUES ('$new_id', '$user_id', '$product_id', '$product_quantity', '$total_prices', '$user_address', 'Not-Paid')");
+    $addOrderQ = mysqli_query($conn, "INSERT INTO order_table VALUES ('$new_id', '$user_id', '$product_id', '$product_quantity', '$total_prices', 'Not-Paid')");
 
     if($addOrderQ) {
         $next_q = mysqli_query($conn, "SELECT * FROM order_table WHERE order_id = '$new_id'");

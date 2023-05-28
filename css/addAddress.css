@@ -24,6 +24,17 @@ body {
     box-shadow: 1px 2px 3px rgba(0,0,0,.5);
 }
 
+.select_input {
+    width: 50%;
+    padding: 1%;
+    margin-top: 1%;
+    border-radius: 5px;
+    border: none;
+    -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+}
+
 .h4-title {
     letter-spacing: 1px;
 }
@@ -34,12 +45,6 @@ body {
 
 .location-form-container {
     margin-top: 2%;
-}
-
-.location-form-grid {
-    display: grid;
-    grid-template-columns: auto auto;
-    width: 100%;
 }
 
 .left-location-form>.input-container>.address-input {

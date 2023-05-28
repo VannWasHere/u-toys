@@ -11,7 +11,7 @@ include 'component/set_cookies.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>Add User Address</title>
 
     <!-- Local CSS -->
     <link rel="stylesheet" href="css/addAddress.css">
@@ -56,16 +56,18 @@ include 'component/navigation_bar.php';
                             <div class="left-location-form">
                                 <div class="input-container">
                                     <label for="" class="form-label">Province</label> <br>
-                                    <input type="text" class="address-input" name="receiver_province" placeholder="Ex: Jawa Barat" required> <br>
+                                    <select name="province_name" class="select_input">
+
+                                    </select>
                                 </div>
                             </div>
 
                             <!-- Right Grid -->
-                            <div class="right-location-form">
-                                <div class="input-container">
-                                    <label for="" class="form-label">City</label> <br>
-                                    <input type="text" class="address-input" name="receiver_city" placeholder="Ex: Kota Bogor" required> <br>
-                                </div>
+                            <div class="input-container">
+                                <label for="" class="form-label">City</label> <br>
+                                <select name="city_name" class="select_input">
+
+                                </select>
                             </div>
                         </div>
                         <div class="input-container">
@@ -77,11 +79,36 @@ include 'component/navigation_bar.php';
                     <button type="submit" id="submit-add-address">Submit New Address</button>
                 </form>
             </div>
-
         </div>
     </div>
     <!-- Javascript Link -->
     <script src="https://kit.fontawesome.com/e67bdeab51.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Auto Fill JS -->
+    <script>
+    $(document).ready(function(){
+        $.ajax({
+          type: 'post',
+          url: 'raja-ongkir/request/request_province.php',
+          success: function(hasil_provinsi){
+            $("select[name=province_name]").html(hasil_provinsi);
+          }
+        });
+
+        $("select[name=province_name]").on("change", function(){
+          // Ambil id_provinsi ynag dipilih (dari atribut pribadi)
+          var choosen_province = $("option:selected", this).attr("province_id");
+          $.ajax({
+            type: 'post',
+            url: 'raja-ongkir/request/request_city.php',
+            data: 'user_province='+choosen_province,
+            success:function(hasil_distrik){
+              $("select[name=city_name]").html(hasil_distrik);
+            }
+          })
+        });
+    });
+  </script>
 </body>
 </html>

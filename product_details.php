@@ -67,7 +67,7 @@ include 'component/navigation_bar.php';
 
                                 while($address = mysqli_fetch_array($address_queries)) {
                                     echo "
-                                    <option value='$address[receiver_address]'>$address[receiver_address]</option>
+                                    <option value='$address[address_id]'>$address[receiver_address]</option>
                                     ";
                                 }
                             ?>

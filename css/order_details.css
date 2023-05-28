@@ -6,3 +6,42 @@ body {
     padding-right: 7%;
 }
 
+#ord-details-h2 {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+#checkout-username {
+    padding-left: 1%;
+    letter-spacing: 1px;
+    margin-top: 0.6%;
+}
+
+#checkout-h3 {
+    margin-top: 2%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+tbody>tr>td {
+    vertical-align: middle;
+}
+
+.checkout-product-images {
+    width: 100px;
+}
+
+.shipping-container {
+    margin-top: 1%;
+}
+
+.shipping-expedition {
+    margin-top: 2%;
+}
+
+.input-hidden {
+    display: none;
+}
