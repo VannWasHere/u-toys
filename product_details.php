@@ -58,22 +58,6 @@ include 'component/navigation_bar.php';
                         <p id="product-description"><?=$row['product_details'];?></p>
                     </details>
 
-                    <div class="shipping-option-container">
-                        <p style="margin-top: 1%; letter-spacing: 1px; color: rgb(159, 149, 149);">Shipping To</p>
-                        <select name="user_address" id="shipping-option">
-                            <option value='' selected>Select One</option>
-                            <?php
-                                $address_queries = mysqli_query($conn, "SELECT * FROM user_address WHERE user_id='$_SESSION[user_id]'");
-
-                                while($address = mysqli_fetch_array($address_queries)) {
-                                    echo "
-                                    <option value='$address[address_id]'>$address[receiver_address]</option>
-                                    ";
-                                }
-                            ?>
-                        </select>
-                    </div>
-
                 </div>
 
                 <!-- Right Grid -->

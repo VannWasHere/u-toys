@@ -4,10 +4,20 @@
 body {
     padding-left: 7%;
     padding-right: 7%;
+    height: 200vh;
+}
+
+.order-details-header {
+    position: relative;
+    width: 100%;
+    padding-top: 2%;
+}
+
+.fixed-container {
+    background-color: white;
 }
 
 #ord-details-h2 {
-    margin-top: 1%;
     margin-bottom: 1%;
     text-align: center;
     text-transform: uppercase;
@@ -44,4 +54,15 @@ tbody>tr>td {
 
 .input-hidden {
     display: none;
+}
+
+#button-addpayment {
+    margin-top: 1%;
+    padding: 0.5%;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    background-color: var(--third-g-color);
+    border-radius: 6px;
+    color: var(--text-color-semi-white);
 }

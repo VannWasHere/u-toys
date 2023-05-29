@@ -5,11 +5,14 @@
 
 namespace Midtrans;
 
+use mysqli;
+
 require_once dirname(__FILE__) . '/../../Midtrans.php';
+require '../../../php/1_conn.php';
 // Set Your server key
 // can find in Merchant Portal -> Settings -> Access keys
-Config::$serverKey = '<your server key>';
-Config::$clientKey = '<your client key>';
+Config::$serverKey = 'SB-Mid-server-mGoXp20E0tHl4gUeCVgD-L0P';
+Config::$clientKey = 'SB-Mid-client-KrbReCvzdmYc2q9y';
 
 // non-relevant function only used for demo/example purpose
 printExampleWarningMessage();
@@ -18,28 +21,33 @@ printExampleWarningMessage();
 // Config::$isProduction = true;
 Config::$isSanitized = Config::$is3ds = true;
 
+$inv_id = $_GET['order_id'];
+
+$queries = mysqli_query($conn, "SELECT * FROM invoice JOIN order_table ON invoice.order_id = order_table.order_id JOIN product ON invoice.product_id = product.product_id JOIN user ON invoice.user_id = user.user_id JOIN user_address ON invoice.address_id = user_address.address_id WHERE invoice_id = '$_GET[order_id]'");
+$row = mysqli_fetch_assoc($queries);
+
 // Required
 $transaction_details = array(
-    'order_id' => rand(),
-    'gross_amount' => 94000, // no decimal allowed for creditcard
+    'order_id' => $row['invoice_id'],
+    'gross_amount' => $row['subtotal'],
 );
 // Optional
 $item_details = array (
     array(
         'id' => 'a1',
-        'price' => 94000,
+        'price' => $row['subtotal'],
         'quantity' => 1,
-        'name' => "Apple"
+        'name' => $row['product_name'],
     ),
   );
 // Optional
 $customer_details = array(
-    'first_name'    => "Andri",
-    'last_name'     => "Litani",
-    'email'         => "andri@litani.com",
-    'phone'         => "081122334455",
-    'billing_address'  => $billing_address,
-    'shipping_address' => $shipping_address
+    'first_name'    => $row['username'],
+    'last_name'     => "",
+    'email'         => $row['email_address'],
+    'phone'         => "",
+    'billing_address'  => $row['email_address'],
+    'shipping_address' => $row['email_address']
 );
 // Fill transaction details
 $transaction = array(
@@ -64,7 +72,7 @@ function printExampleWarningMessage() {
         echo "In file: " . __FILE__;
         echo "<br>";
         echo "<br>";
-        echo htmlspecialchars('Config::$serverKey = \'<your server key>\';');
+        echo htmlspecialchars('Config::$serverKey = \'SB-Mid-server-mGoXp20E0tHl4gUeCVgD-L0P\';');
         die();
     } 
 }
@@ -74,7 +82,7 @@ function printExampleWarningMessage() {
 <!DOCTYPE html>
 <html>
     <body>
-        <button id="pay-button">Pay!</button>
+        <button id="pay-button">Pay Now</button>
         <!-- TODO: Remove ".sandbox" from script src URL for production environment. Also input your client key in "data-client-key" -->
         <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="<?php echo Config::$clientKey;?>"></script>
         <script type="text/javascript">
