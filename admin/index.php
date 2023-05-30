@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['admin-login'])) {
+    header("Location: adminLogin.php");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -9,14 +9,14 @@
 </head>
 <body>
     <div class="form-container">
-        <form action="2_adminLogin_process.php" method="post">
+        <form action="php/adminLogin_process.php" method="post">
             <label for="" class="login-label">Admin Name:</label> <br>
             <input type="text" class="login-input" name="admin_name"> <br>
 
             <label for="" class="login-label">Password: </label> <br>
             <input type="password" class="login-input" name="password"> <br>
 
-            <button type="button" id="admin-login">Login</button>
+            <button type="submit" name="admin-login" id="admin-login">Login</button>
         </form>
     </div>
 </body>
