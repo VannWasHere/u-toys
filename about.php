@@ -43,12 +43,12 @@ include 'component/navigation_bar.php';
     <div class="grid-container">
         <div class="left-grid">
             <!-- Tiktok images -->
-            <a href="https://www.instagram.com/utoys.boardgame/" id="tiktok-logos" target="_blank"><img src="assets/tiktok_logo.png" class="soc-logo" alt="Tiktok Logo"></a>
+            <a href="https://www.tiktok.com/@utoys.boardgame" id="tiktok-logos" target="_blank"><img src="assets/tiktok_logo.png" class="soc-logo" alt="Tiktok Logo"></a>
             <p class="soc-p">TikTok</p>
         </div>
         <div class="right-grid">
             <!-- Instagram images -->
-            <a href="https://www.tiktok.com/@utoys.boardgame" id="ig-logos" target="_blank"><img src="assets/instagram_logo.png" class="soc-logo" alt="Instagram Logo"></a>
+            <a href="https://www.instagram.com/utoys.boardgame/" id="ig-logos" target="_blank"><img src="assets/instagram_logo.png" class="soc-logo" alt="Instagram Logo"></a>
             <p class="soc-p">Instagram</p>
         </div>
     </div>
