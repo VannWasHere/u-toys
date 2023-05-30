@@ -55,10 +55,30 @@ include 'component/navigation_bar.php';
             <h1 class="home-products-h1">Products Category</h1>
             <div class="home-products-category-container">
                 <!-- Examples -->
-                <div class="category-examples">Products 1</div>
-                <div class="category-examples">Products 2</div>
-                <div class="category-examples">Products 3</div>
-                <div class="category-examples">Products 4</div>
+                <div class="category-examples" onclick="window.location.href = 'product.php?cat=puzzle'" id="puzzle-category">
+                    <div class="h3-container">
+                        <h3>Puzzle</h3>
+                    </div>
+                </div>
+
+                <div class="category-examples" onclick="window.location.href = 'product.php?cat=rubic'" id="cube-category">
+                    <div class="h3-container">
+                        <h3>Cube</h3>
+                    </div>
+                </div>
+
+                <div class="category-examples" onclick="window.location.href = 'product.php?cat=board-game'" id="board-category">
+                    <div class="h3-container">
+                        <h3>Board Game</h3>
+                    </div>
+                </div>
+
+                <div class="category-examples" onclick="window.location.href = 'product.php?cat=card-game'" id="card-category">
+                    <div class="h3-container">
+                        <h3>Card</h3>
+                    </div>
+                </div>
+
             </div>
         </div>
         <div class="home-products">

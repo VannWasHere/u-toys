@@ -99,10 +99,37 @@ body {
 
 /* Examples of Category */
 .category-examples {
-    width: 150px;
-    height: 150px;
+    cursor: pointer;
+    width: 250px;
+    height: 100px;
     border-radius: 10px;
     background-color: var(--second-g-color);
+}
+
+.h3-container {
+    padding: 35px 0;
+    text-align: center;
+    letter-spacing: 2px;
+    color: var(--text-color-semi-white);
+    background-color: rgba(0, 0, 0, 0.389);
+    border-radius: 10px;
+}
+
+#puzzle-category {
+    background-image: url('../assets/button-puzzle-images.jpeg');
+}
+
+#cube-category {
+    background-image: url('../assets/button-cube-images.jpeg');
+    object-fit: cover;
+}
+
+#board-category {
+    background-image: url('../assets/button-board-images.jpeg');
+}
+
+#card-category {
+    background-image: url('../assets/button-card-images.jpeg');
 }
 
 .home-products-h1 {
