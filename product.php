@@ -37,28 +37,59 @@ include 'component/navigation_bar.php';
             <img class="adds-image" id="cat-images" src="" alt="adds">
         </div>
         
-        <!-- Filter Product -->
-        <div class="filter-container">
-            
-            <p>Sort based of</p>
-            <!-- Dropdown Filter -->
-            <select name="product-filter" id="product-filter">
-                <option value="">Select Filter</option>
-                <option value="clear" class="filter-opt">No Filter</option>
-                <option value="low-to-high-prices" class="filter-opt">Low to High Prices</option>
-                <option value="high-to-low-prices" class="filter-opt">High to Low Prices</option>
-            </select>
+        <div class="flex-container">
+            <!-- Search Bar -->
+            <div class="search-container">
+                <label for="search-input" style="text-transform: uppercase; font-weight:600;">Search <?= $_GET['cat'];?> Product</label>
+                <input type="search" name="product-search" id="user-search" placeholder="Ex: Monopoly" autocomplete="off">
+                <input type="text" value="<?=$_GET['cat'];?>" id="prod_cat" style='display:none;'>
+                <input type="text" value="<?=$_GET['sort'];?>" id="prod_filtering" style='display:none;'>
+                 
+            </div>
+            <!-- Filter Product -->
+            <div class="filter-container">
+                <p>Sort based of</p>
+                <!-- Dropdown Filter -->
+                <select name="product-filter" id="product-filter">
+                    <option value="">Select Filter</option>
+                    <option value="clear" class="filter-opt">No Filter</option>
+                    <option value="low-to-high-prices" class="filter-opt">Low to High Prices</option>
+                    <option value="high-to-low-prices" class="filter-opt">High to Low Prices</option>
+                </select>
+            </div>
         </div>
 
         <div class="product-items-container">
             <div class="product-sidebar">
                 <p style="letter-spacing: 1px;"> <b>Category</b> </p>
             </div>
-            <div class="product-grid-card-container">
-                <?php
-                if(isset($_GET['cat'])) {
-                    $q_not_get = mysqli_query($conn, "SELECT *, REPLACE(FORMAT(product_prices, 0), ',', '.') AS formatted_prices FROM product WHERE product_category='$_GET[cat]' ORDER BY product_prices $_GET[sort]");
-                    while($product = mysqli_fetch_array($q_not_get)) {
+            <div class="container-the-card" id="containing-card">
+                <div class="product-grid-card-container">
+                    <?php
+                    if(isset($_GET['cat'])) {
+                        $q_not_get = mysqli_query($conn, "SELECT *, REPLACE(FORMAT(product_prices, 0), ',', '.') AS formatted_prices FROM product WHERE product_category='$_GET[cat]' ORDER BY product_prices $_GET[sort]");
+                        while($product = mysqli_fetch_array($q_not_get)) {
+                            echo "
+                            <div class='card-container'>
+                                <a href='product_details.php?id=$product[product_id]' id='product-card'>
+                                    <div class='product-images-container'>
+                                        <img src='images/$product[product_photos]' alt='$product[product_name]' class='product-images'>
+                                    </div>
+                                    <div class='product-description'>
+                                        <p class='product-name'>$product[product_name]</p>
+                                        <p class='product-category' style='text-transform: uppercase;'>$product[product_category]</p>
+                                        <p class='product-price'>Rp.$product[formatted_prices]</p>
+                                        <div class='detail-and-addcart'>
+                                            <button type='button' class='see-details-button'>See Detail</button>
+                                            <p class='add-to-cart'>Add to Cart</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            ";
+                        }
+                    } else if(isset($_GET['cat']) && isset($_GET['sort'])) {
+                        while($product = mysqli_fetch_array($q_not_get)) {
                         echo "
                         <div class='card-container'>
                             <a href='product_details.php?id=$product[product_id]' id='product-card'>
@@ -77,30 +108,10 @@ include 'component/navigation_bar.php';
                             </a>
                         </div>
                         ";
+                        }
                     }
-                } else if(isset($_GET['cat']) && isset($_GET['sort'])) {
-                    while($product = mysqli_fetch_array($q_not_get)) {
-                    echo "
-                    <div class='card-container'>
-                        <a href='product_details.php?id=$product[product_id]' id='product-card'>
-                            <div class='product-images-container'>
-                                <img src='images/$product[product_photos]' alt='$product[product_name]' class='product-images'>
-                            </div>
-                            <div class='product-description'>
-                                <p class='product-name'>$product[product_name]</p>
-                                <p class='product-category' style='text-transform: uppercase;'>$product[product_category]</p>
-                                <p class='product-price'>Rp.$product[formatted_prices]</p>
-                                <div class='detail-and-addcart'>
-                                    <button type='button' class='see-details-button'>See Detail</button>
-                                    <p class='add-to-cart'>Add to Cart</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    ";
-                    }
-                }
-                ?>
+                    ?>
+                </div>
             </div>
         </div>
     </div>
@@ -108,13 +119,12 @@ include 'component/navigation_bar.php';
     <!-- Javascript Link -->
     <script src="js/isLogin.js"></script>
     <script src="js/prices_formatter.js"></script>
+    <script src="js/ajax_search.js"></script>
 
     <script>
         var url = new URL(window.location.href);
         var cat = url.searchParams.get('cat');
         var addsImage = document.getElementById('cat-images');
-
-        console.log(cat);
 
         if(cat == 'puzzle') {
             var page_puzzle = document.getElementById('puzzle-div');
@@ -131,7 +141,7 @@ include 'component/navigation_bar.php';
         } else if(cat == 'card-game') {
             var page_puzzle = document.getElementById('card-div');
             page_puzzle.classList.add('active');
-            addsImage.src="adds/card.png";
+            addsImage.src="adds/card.jpg";
         } else if(cat == null) {
             window.location.assign('product.php?cat=puzzle');
         } else if(cat == '') {

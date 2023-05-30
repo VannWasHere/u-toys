@@ -63,6 +63,24 @@ body {
     object-fit: cover;
 }
 
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search-container{
+    width: 100%;
+}
+
+#user-search {
+    width: 100%;
+    padding: 1.7%;
+    border-radius: 6px;
+    border: none;
+    background-color: var(--fifth-g-color);
+}
+
 .filter-container {
     width: 100%;
     text-align: right;
@@ -71,7 +89,8 @@ body {
 
 #product-filter {
     padding: 1%;
-    border: none;
+    border-radius: 6px;
+    border: 2px solid #0000005b;
 }
 
 #cat-images {
