@@ -20,6 +20,7 @@ echo "<script>var isLoggedIn = " . ($loggedIn ? "true" : "false") . ";</script>"
 
     <!-- Local CSS -->
     <link rel="stylesheet" href="css/home.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 
     <!-- Link JS -->
     <script src="js/carousel.js"></script>

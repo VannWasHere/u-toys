@@ -15,6 +15,8 @@ include 'component/set_cookies.php';
 
     <!-- Local CSS -->
     <link rel="stylesheet" href="css/addAddress.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
 </head>
 <body> 
 

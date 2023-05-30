@@ -19,6 +19,8 @@ echo "<script>var isLoggedIn = " . ($loggedIn ? "true" : "false") . ";</script>"
 
     <!-- Local CSS -->
     <link rel="stylesheet" href="css/product.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
 </head>
 <body>
 <?php
@@ -32,11 +34,12 @@ include 'component/navigation_bar.php';
         ?>
 
         <div class="images-container">
-            <img class="adds-image" src="adds/board-game.jpg" alt="adds">
+            <img class="adds-image" id="cat-images" src="" alt="adds">
         </div>
         
         <!-- Filter Product -->
         <div class="filter-container">
+            
             <p>Sort based of</p>
             <!-- Dropdown Filter -->
             <select name="product-filter" id="product-filter">
@@ -109,21 +112,26 @@ include 'component/navigation_bar.php';
     <script>
         var url = new URL(window.location.href);
         var cat = url.searchParams.get('cat');
+        var addsImage = document.getElementById('cat-images');
 
         console.log(cat);
 
         if(cat == 'puzzle') {
             var page_puzzle = document.getElementById('puzzle-div');
             page_puzzle.classList.add('active');
+            addsImage.src="adds/puzzle.png";
         } else if(cat == 'rubic') {
             var page_puzzle = document.getElementById('rubic-div');
             page_puzzle.classList.add('active');
+            addsImage.src="adds/rubic.png";
         } else if(cat == 'board-game') {
             var page_puzzle = document.getElementById('board-div');
             page_puzzle.classList.add('active');
+            addsImage.src="adds/board-game.jpg";
         } else if(cat == 'card-game') {
             var page_puzzle = document.getElementById('card-div');
             page_puzzle.classList.add('active');
+            addsImage.src="adds/card.png";
         } else if(cat == null) {
             window.location.assign('product.php?cat=puzzle');
         } else if(cat == '') {

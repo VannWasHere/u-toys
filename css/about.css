@@ -12,7 +12,28 @@ body {
 }
 
 .grid-container {
+    width: 100%;
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-around;
+    margin-top: 6%;
+}
+
+.soc-logo {
+    cursor: pointer;
+    width: 100px;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.soc-logo:nth-child(1):hover {
+    transform: rotate(20deg);
+    transform: translateY(-15px);
+}
+
+.soc-p {
+    font-weight: 600;
+    text-align: center;
+    margin-top: 4%;
+    letter-spacing: 1px;
 }

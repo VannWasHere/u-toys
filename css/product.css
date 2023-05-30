@@ -74,6 +74,10 @@ body {
     border: none;
 }
 
+#cat-images {
+    border-radius: 6px;
+}
+
 .class-opt {
     border: none;
 }

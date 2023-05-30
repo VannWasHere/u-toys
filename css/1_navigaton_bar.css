@@ -20,6 +20,10 @@
     text-align: center;
 }
 
+#utoys-logo-header {
+    width: 120px;
+}
+
 .section3-header {
     flex: 25%;
     text-align: right;

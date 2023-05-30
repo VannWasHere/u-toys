@@ -8,6 +8,8 @@
     
     <!-- Local CSS -->
     <link rel="stylesheet" href="css/register.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
 </head>
 <body>
     <div class="container">

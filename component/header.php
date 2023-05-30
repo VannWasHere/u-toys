@@ -15,7 +15,7 @@
             ?>!</h3>
         </div>
         <div class="section2-header">
-            <h2>U-Toys</h2>
+            <img src="assets/toys.png" id="utoys-logo-header" alt="u-toys-logo">
         </div>
         <div class="section3-header">
             <div class="user-nav" id="userLogged">

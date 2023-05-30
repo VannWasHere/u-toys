@@ -35,6 +35,8 @@ if(isset($_SESSION['login']) == TRUE) {
 
     <!-- Local CSS -->
     <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
 </head>
 <body>
     <div class="container">
