@@ -45,7 +45,7 @@ $customer_details = array(
     'first_name'    => $row['username'],
     'last_name'     => "",
     'email'         => $row['email_address'],
-    'phone'         => "",
+    'phone'         => "0812939457",
     'billing_address'  => $row['email_address'],
     'shipping_address' => $row['email_address']
 );
@@ -63,7 +63,6 @@ try {
 catch (\Exception $e) {
     echo $e->getMessage();
 }
-echo "snapToken = ".$snap_token;
 
 function printExampleWarningMessage() {
     if (strpos(Config::$serverKey, 'your ') != false ) {

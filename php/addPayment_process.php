@@ -2,12 +2,11 @@
 require '1_conn.php';
 
 if(isset($_POST['addPayment'])) {
-    // Create ID
     // Get current date in ddmmyy format
     $today = date("dmy");
 
     // Get the highest ID for today
-    $sql = "SELECT MAX(order_id) AS max_id FROM invoice WHERE invoice_id LIKE 'PAY$today%'";
+    $sql = "SELECT MAX(invoice_id) AS max_id FROM invoice WHERE invoice_id LIKE 'PAY$today%'";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
     $last_id = $row['max_id'] ?? "PAY$today" . "000";

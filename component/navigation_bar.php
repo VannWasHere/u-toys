@@ -7,7 +7,7 @@
             <ul id="navigation-ul">
                 <a href="index.php">Home</a>
                 <a href="about.html">About</a>
-                <a href="product.html">Product</a>
+                <a href="product.php">Product</a>
                 <a href="">Contact Us</a>
             </ul>
         </nav>
