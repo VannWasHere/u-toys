@@ -5,13 +5,13 @@
 
             <div class="admin-choices-container">
                 <div class="choices-container">
-                    <button class="choices">Add Item</button>
+                    <button class="choices" onclick="window.location.href='index.php'">Add Item</button>
                 </div>
                 <div class="choices-container">
                     <button class="choices">Edit Item</button>
                 </div>
                 <div class="choices-container">
-                    <button class="choices">User Order</button>
+                    <button class="choices" onclick="window.location.href='userOrder.php'">User Order</button>
                 </div>
             </div>
         </div>

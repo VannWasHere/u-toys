@@ -52,5 +52,6 @@ include 'component/navigation_bar.php';
             <p class="soc-p">Instagram</p>
         </div>
     </div>
+    <script src="js/isLogin.js"></script>
 </body>
 </html>

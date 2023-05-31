@@ -1,0 +1,15 @@
+@import url('1_global.css');
+@import url('1_admin_page.css');
+
+#h2-header {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+#user-order-rows {
+    cursor: pointer;
+}
