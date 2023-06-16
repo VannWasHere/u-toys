@@ -14,7 +14,7 @@
 <body>
     <div class="container">
         <div class="image-register">
-            <img src="https://images.unsplash.com/photo-1553517491-0d108eea9147?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1228&q=80" class="cover" alt="Toys Images">
+            <img src="assets/sign_up.png" class="cover" alt="Toys Images">
         </div>
         <div class="form-register">
             <h2 id="register-header">Create Your Account</h2>

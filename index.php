@@ -35,13 +35,13 @@ include 'component/navigation_bar.php';
     <div class="slider-container">
         <div class="images-sec-container">
             <div class="images-slide fade-animation">
-                <img src="https://images3.alphacoders.com/823/82317.jpg" alt="image1" class="image-content">
+                <img src="assets/banner1.jpg" alt="image1" class="image-content">
             </div>
             <div class="images-slide another fade-animation">
-                <img src="https://images.alphacoders.com/475/475967.jpg" alt="image2" class="image-content">
+                <img src="assets/banner2.jpg" alt="image2" class="image-content">
             </div>
             <div class="images-slide another fade-animation">
-                <img src="https://images3.alphacoders.com/147/147799.jpg" alt="image3" class="image-content">
+                <img src="assets/banner3.jpg" alt="image3" class="image-content">
             </div>
             
             <!-- Next and previous buttons -->
@@ -101,16 +101,19 @@ include 'component/navigation_bar.php';
                             <p class='product-price product-prices'>IDR $row[product_prices]</p>
                             <div class='detail-and-addcart'>
                                 <button type='button' class='see-details-button'>See Detail</button>
-                                <p class='add-to-cart'>Add to Cart</p>
+                                <form action='php/addtocart_process.php' method='post'>
+                                    <input type='text' name='user_id' value='$_SESSION[user_id]' hidden>    
+                                    <input type='text' name='product_id' value='$row[product_id]' hidden>
+                                    <button type='submit' class='add-to-cart'>Add to Cart</button>
+                                </form>
                             </div>
                         </div>
                     </a>
                 </div>   
                 ";
             }
-
-            ?>
-                
+            
+            ?>   
             </div>
         </div>
     </div>

@@ -81,7 +81,11 @@ include 'component/navigation_bar.php';
                                         <p class='product-price'>Rp.$product[formatted_prices]</p>
                                         <div class='detail-and-addcart'>
                                             <button type='button' class='see-details-button'>See Detail</button>
-                                            <p class='add-to-cart'>Add to Cart</p>
+                                            <form action='php/addtocart_process.php' method='post'>
+                                                <input type='text' name='user_id' value='$_SESSION[user_id]' hidden>    
+                                                <input type='text' name='product_id' value='$product[product_id]' hidden>
+                                                <button type='submit' class='add-to-cart'>Add to Cart</button>
+                                            </form>
                                         </div>
                                     </div>
                                 </a>
@@ -102,7 +106,11 @@ include 'component/navigation_bar.php';
                                     <p class='product-price'>Rp.$product[formatted_prices]</p>
                                     <div class='detail-and-addcart'>
                                         <button type='button' class='see-details-button'>See Detail</button>
-                                        <p class='add-to-cart'>Add to Cart</p>
+                                        <form action='php/addtocart_process.php' method='post'>
+                                            <input type='text' name='user_id' value='$_SESSION[user_id]' hidden>    
+                                            <input type='text' name='product_id' value='$row[product_id]' hidden>
+                                            <button type='submit' class='add-to-cart'>Add to Cart</button>
+                                        </form>
                                     </div>
                                 </div>
                             </a>

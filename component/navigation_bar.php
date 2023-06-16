@@ -5,7 +5,7 @@
                 <a href="index.php">Home</a>
                 <a href="about.php">About</a>
                 <a href="product.php">Product</a>
-                <a href="contact.php">Contact Us</a>
+                <a href="customer_support.php">Contact Us</a>
             </ul>
         </nav>
     </div>

@@ -20,7 +20,7 @@
         <div class="section3-header">
             <div class="user-nav" id="userLogged">
                 <div class="user-login">
-                    <a href="cart.html" style="margin-right: 10%;"><img src="saved-icon/cart-shopping-solid.svg" id="shopping-cart" alt="shopping-cart"></a>
+                    <a href="cart.php" style="margin-right: 10%;"><img src="saved-icon/cart-shopping-solid.svg" id="shopping-cart" alt="shopping-cart"></a>
                     <a href="account.html"><img src="https://cdn0-production-images-kly.akamaized.net/dRlCPAybKFVW0XiDmLuO4RJriE4=/1200x1200/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/4119862/original/065226400_1660189533-i_m_Groot.jpg" id="user-photos" alt="userprofile"></a>
                 </div>
             </div>
