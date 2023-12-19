@@ -8,4 +8,4 @@
 ![alt text](https://github.com/VannWasHere/u-toys/blob/main/assets/ListBarang.jpg)
 
 ## Cart
-![alt text](https://github.com/VannWasHere/u-toys/blob/main/assets/cart.jpg)
+![alt text](https://github.com/VannWasHere/u-toys/blob/main/assets/cart.png)
